@@ -16,12 +16,12 @@
                 $.ajax(url).done(function (data) {
                     //alert("Palvelin vastasi!");
                     var tuntiData = "";
-                    var tuntiHeader = "<table><tr><th>Rivi</th><th>Päiväys</th><th>Tunnit</th><th>Projekti</th></tr>"
+                    //var tuntiHeader = "<table><tr><th>Rivi</th><th>Päiväys</th><th>Tunnit</th><th>Projekti</th></tr>"
 
                     for (var i = 0; i < data.length; i++) {
                         tuntiData += (i + 1) + ": " + data[i].paivamaara + " " + data[i].tunnit + "\r\n";
                     }
-                    $("#henkiloText_" + henkiloId).html("<pre>" + tuntiData + tuntiHeader + "</pre>");
+                    $("#henkiloText_" + henkiloId).html("<pre>" + tuntiData + "</pre>");
 
                     //$(this).parent().parent().find(".glyphicon-plus").removeClass("glyphicon-plus").addClass("glyphicon-minus");
                 });
